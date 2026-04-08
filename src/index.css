@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-orange: #d97706; /* Warm terracotta/orange */
+  --color-brand-green: #3f6212; /* Deep olive green */
+  --color-brand-cream: #fdfcfb; /* Warm off-white */
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-stone-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-stone-200;
+}
+
+.menu-item-card {
+  @apply p-4 rounded-2xl bg-white border border-stone-100 shadow-sm hover:shadow-md transition-shadow;
+}
